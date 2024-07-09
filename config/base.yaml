@@ -1,0 +1,35 @@
+
+#type: args
+
+
+train:
+  epochs: 200
+  batch_size: 2
+  lr: 1.0e-3
+  itr_per_epoch: 1.0e+8
+
+data:
+  data_folder: "/home/jose/projects/timediff/data/test"
+  start_hour: 4
+  end_hour: 22
+
+diffusion:
+  layers: 4 
+  d_meta: 256 
+  nheads: 8
+  num_categories_meta: 0
+  num_continious_meta: 2
+  d_cat: 128
+  d_cont: 128
+  diffusion_embedding_dim: 128
+  beta_start: 0.0001
+  beta_end: 0.5
+  num_steps: 20
+  schedule: "quad"
+  is_linear: False
+
+model:
+  is_unconditional: 0
+  timeemb: 128
+  featureemb: 16
+  target_strategy: "random"
